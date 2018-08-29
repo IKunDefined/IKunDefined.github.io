@@ -27,20 +27,20 @@ tags:
 * HTML
     * HTML5
 * WWW
-* 协议
-    * IP
-    * DNS
-    * HTTP
-    * HTTPS
 * W3C
 * 网页
-* 互联网
 * 浏览器
 * 服务器
 
 ## 工具
 
 > 工欲善其事，必先利其器
+
+* 浏览器
+    * IE
+    * Opera
+    * Chrome
+    * FireFox
 
 * 编辑器
     * [Atom](https://atom.io/)
@@ -73,32 +73,35 @@ tags:
 
 ### 标签
 
-* 文本
-    * h
-    * p
-    * a
-* 列表
-    * ul
-        * li
-    * ol
-        * li
-    * dl
-        * dt
-        * dd
-* 表格
-    * table
-        * tr
+#### 文本
+* h#
+* p
+* a
+
+#### 列表
+* ul
+    * li
+* ol
+    * li
+* dl
+    * dt
+    * dd
+
+#### 表格
+* table
+    * tr
         * td
-        * th
-* 表单
-    * form
+
+#### 表单
+* form
     * input
     * select
         * option
     * textarea
-* 区块
-    * div
-    * span
+
+#### 区块
+* div
+* span
 
 ### 属性
 
@@ -117,28 +120,39 @@ tags:
 * content
 * charset
 * type
+* value
 
 ## 相关知识
 
 * URL
     * URI
 * 颜色
-    * 颜色表示
-        * 单词
-        * HSL表示
-        * RGB表示
-            * 十进制
-            * 十六进制
-    * WEB色彩表示原理
-        * 三原色
-        * RGB模式
-        * HSL模式
+    * 单词
+    * HSL表示
+    * RGB表示
+        * 十进制
+        * 十六进制
 * XHTML
 * 字符实体
 
 ## 扩展概念
 
 * 语义网
+* 网络协议
+    * IP
+    * DNS
+    * HTTP
+    * HTTPS
+* 色彩表示原理
+    * RGB
+        * 三原色
+    * HSL
+
+## 其他主题
+
+* 网页渲染流程
+* 网址输入浏览器之后...
+
 
 ## 常见问题解决方案
 

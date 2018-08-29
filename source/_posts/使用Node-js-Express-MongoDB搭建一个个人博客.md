@@ -3,7 +3,6 @@ title: 使用Node.js+Express+MongoDB搭建一个个人博客【更新中】
 date: 2018-08-21 14:54:29
 categories: 总结
 tags:
-- 分享
 - Node.js
 - Express
 - MongoDB
