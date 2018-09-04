@@ -10,6 +10,8 @@ tags:
 
 <!-- more -->
 
+***
+
 ## 1. 配置文件设定
 
 * `post_asset_folder`
