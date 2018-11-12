@@ -1,0 +1,87 @@
+<!-- archive page body -->
+<div class="main">
+	<!-- post part -->
+	<section class="posts">
+		<!-- category archive -->
+		<% if(is_category()){ %>
+			<% page.posts.each(function(post){ %>
+				<article class="post">
+					<div class="post_top">
+						<div class="post_title">
+							<a class="post_title_link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+						</div>
+						<div class="post_meta">
+							<div>
+								<span>作者：<a href="<%- url_for('../2017/08/24/关于我的两三事：依可iketan') %>"><%= config.author %></a></span>
+								<span>时间：<a href="/archives"><%- date(post.date,"YYYY-MM-DD") %></a></span>
+								<span>标签：<%- list_tags(post.tags,{
+									show_count: false
+								}) %></span>
+							</div>	
+						</div>
+					</div>
+					<div class="post_content markdown-body">
+						<%- post.excerpt %>
+					</div>
+					<a class="read_more" href="<%- url_for(post.path) %>">阅读全文</a>
+				</article>
+			<% }) %>
+			<%- partial('_partial/paginator.ejs')%>
+		<!-- the others(tag/archive) -->
+		<% }else{ %>
+			<% page.posts.each(function(post){ %>
+				<article class="post">
+					<div class="post_title">
+						<a class="post_title_link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+					</div>
+					<div class="post_content markdown-body">
+						<%- post.excerpt %>
+					</div>
+					<a class="read_more" href="<%- url_for(post.path) %>">阅读全文</a>
+					<div class="post_meta">
+						<div>
+							<span>作者：<a href="<%- url_for('../2017/08/24/关于我的两三事：依可iketan') %>"><%= config.author %></a></span>
+							<span>时间：<a href="/archives"><%- date(post.date,"YYYY-MM-DD") %></a></span>
+							<span>标签：<%- list_tags(post.tags,{
+								show_count: false
+							}) %></span>
+						</div>	
+					</div>
+				</article>
+			<% }) %>
+			<%- partial('_partial/paginator.ejs')%>
+		<% } %>
+	</section>
+	<!-- information part -->
+	<div class="information">
+		<!-- tag information -->
+		<% if(is_tag()){ %>
+			<div class="change">
+				<span alt="这个部分的功能仍在开发中">文章列表</span>
+			</div>
+			<div class="tag_cloud">
+				<span>标签云</span>
+				<div><%- tagcloud() %></div>
+			</div>
+			<div class="tag_type">
+				<span>标签分类</span>
+				<div><%- list_tags() %></div>
+			</div>
+			<script type="text/javascript">
+				// 赋予文章列表部分单击后文章摘要部分转换为文章列表部分，同时文章列表部分转变为文章摘要，且单击文章摘要可以产生反效果
+			</script>
+		<!-- archive information -->
+		<% }else if(is_archive()){ %>
+			<div class="change">
+				<span alt="这个部分的功能仍在开发中">文章列表</span>
+			</div>
+			<div class="archive">
+				<span>归档</span>
+				<div><%- list_archives()%></div>			
+			</div>
+			<script type="text/javascript">
+				// 赋予文章列表部分单击后文章摘要部分转换为文章列表部分，同时文章列表部分转变为文章摘要，且单击文章摘要可以产生反效果
+			</script>
+		<% } %>
+	</div>
+</div>

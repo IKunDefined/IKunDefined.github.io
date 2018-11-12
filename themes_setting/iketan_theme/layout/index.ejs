@@ -1,0 +1,70 @@
+<!-- index page body -->
+<div class="main">
+	<!-- post part -->
+	<section class="posts">
+		<% page.posts.each(function(post){ %>
+			<article class="post">
+				<div class="post_title">
+					<a class="post_title_link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+				</div>
+				<div class="post_content markdown-body">
+					<%- post.excerpt %>
+				</div>
+				<a class="read_more" href="<%- url_for(post.path) %>">阅读全文</a>
+				<div class="post_meta">
+					<div>
+						<span>作者：<a href="<%- url_for('../2017/08/24/关于我的两三事：依可iketan') %>"><%= config.author %></a></span>
+						<span>时间：<a href="/archives"><%- date(post.date,"YYYY-MM-DD") %></a></span>
+						<span>标签：<%- list_tags(post.tags,{
+							show_count: false
+						}) %></span>
+					</div>	
+				</div>
+			</article>
+		<% }) %>
+		<%- partial('_partial/paginator.ejs')%>
+	</section>
+	<!-- information part -->
+	<div class="information">
+		<div class="search">
+			<span>搜索</span>
+			<div>开发中...</div>
+		</div>
+		<div class="comment">
+			<span>留言</span>
+			<div>开发中...</div>
+		</div>
+		<div class="aboutme">
+			<span>关于我</span>
+			<span><a class="other" href="<%- url_for('../2017/08/24/生活日志') %>">近况</a><a class="other" href="<%- url_for('../2017/08/28/自言自语') %>">碎言</a><a class="other" href="<%- url_for('../2017/08/30/明镜止水') %>">自律</a></span>
+			<div>
+				我是一名ACGN文化爱好者，并且喜好各式各样的事物，如果你对我或者我的相关计划、作品等等抱有兴趣的话，你可以进入到我的<a class="aboutme_link" href="<%- url_for('../2017/08/24/关于我的两三事：依可iketan') %>">自我介绍</a>中去了解哦~
+			</div>
+		</div>
+		<div class="teledoor">
+			<span>传送门</span>
+			<div>
+				<span>友情链接</span>
+				<div>
+					然而并没有人与我交换友情链接（苦笑）
+				</div>
+				<span>推荐传送</span>
+				<div>
+					Bilibili
+					<br/>
+					萌娘百科
+					<br/>
+					维基百科
+					<br/>
+				</div>
+				<!-- WOTA艺<br/>
+				UYA部屋<br/>
+				B-KR应援团<br/>
+				夏风字幕组<br/>
+				willbe工作室<br/>
+				NijigenHigersProject<br/>
+				陶煜和陶炜的GitHub传送通道 -->
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<!-- public head part -->
+<head>
+	<meta charset="utf-8" />
+	<title><%= config.title %></title>
+	<%- css('css/basic.css') %>
+	<%- css('css/header.css') %>
+	<%- css('css/nav.css') %>
+	<%- css('css/footer.css') %>
+	<%- css('css/backer.css') %>
+	<%- css('css/markdown.css') %>
+	<% if(is_home()){ %>
+		<%- css('css/index.css') %>
+	<% }else if(is_post()){ %>
+		<%- css('css/post.css') %>
+	<% }else if(is_tag()){ %>
+		<%- css('css/tag_archive.css') %>
+	<% }else if(is_category()){ %>
+		<%- css('css/category_archive.css') %>
+	<% }else if(is_archive()){ %>
+		<%- css('css/archive.css')%>
+	<% } %>	
+</head>

@@ -1,0 +1,96 @@
+<!-- public header part -->
+<header>
+	<div class="center" id="top">
+		<div class="left_title">
+			<h1 class="yike">依可</h1>
+			<h1 class="iketan">iketan</h1>
+		</div>
+		<div class="clock">
+			<button id="time"></button>
+		</div>
+		<div class="right_link">
+			<ul>
+				<li><a id='bilibili' href="https://space.bilibili.com/15563957" target="_blank">B站</a></li>
+				<li><a id='weibo' href="http://weibo.com/u/5800754684" target="_blank">微博</a></li>
+				<li><a id='twitter' href="https://twitter.com/iketanQAQ" target="_blank">推特</a></li>
+				<li><a id='zhihu' href="https://www.zhihu.com/people/wang-jue-94-35/activities" target="_blank">知乎</a></li>
+				<li><a id='tieba' href="http://tieba.baidu.com/home/main?un=殇珏tmt" target="_blank">贴吧</a></li>
+				<li><a id='github' href="https://github.com/tamatan" target="_blank">Github</a></li>
+			</ul>
+		</div>
+	</div>	
+</header>
+<script>
+	//跳转提示
+	linkB = document.getElementById('bilibili');
+	linkB.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的B站空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	linkW = document.getElementById('weibo');
+	linkW.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的微博空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	linkT = document.getElementById('twitter');
+	linkT.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的推特空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	linkZ = document.getElementById('zhihu');
+	linkZ.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的知乎空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	linkTB = document.getElementById('tieba');
+	linkTB.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的贴吧空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	linkG = document.getElementById('github');
+	linkG.onclick = function(){
+		var ask = confirm('你真的想要跳转到我的Github空间嘛~');
+		if(!ask){
+			return false;
+		}
+	}
+	//时间显示
+	function counter(){
+		var time = new Date();
+		var hour = time.getHours();
+		if(hour<10){
+			hour = '0'+hour;
+		}
+		var minute = time.getMinutes();
+		if(minute<10){
+			minute = '0'+minute;
+		}
+		var second = time.getSeconds();
+		if(second<10){
+			second = '0'+second;
+		}
+		document.getElementById('time').innerHTML = hour + ':' + minute + ':' + second;
+	}
+	counter();
+	setInterval(counter,1000);
+	//背景替换
+	change = document.getElementById('time');
+	change.onclick = function(){
+		var bg = document.getElementById('bg');
+		var rand = Math.random();
+		var total = 12;
+		var randN = Math.floor(rand*total); 
+		bg.src = '/img/bg/miku/Origin/bg' + randN + '.jpg'
+	}
+</script>
+		

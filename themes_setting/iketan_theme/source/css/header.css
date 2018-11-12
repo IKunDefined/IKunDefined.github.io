@@ -1,0 +1,75 @@
+header{
+	margin: 0px auto;
+	width: 1000px;
+	height: 205px;
+	background: url(/img/bg_2.jpg);
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 5px 5px 10px #B7D3F2;
+}
+
+.center{
+	color: #fff;	/*测试用*/
+	width: 1000px;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	top: 50px;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.left_title{
+	float: left;
+	position: relative;
+	z-index: 10;
+	left: 10px;
+	text-shadow: 5px 5px 5px #000;
+	letter-spacing: 5px;
+}
+
+.yike{
+	font-size: 32px;
+}
+
+.iketan{
+	font-size: 45px;
+}
+
+.clock{
+	color: #fff;
+	position: absolute;
+	width: 1000px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	z-index: 1;
+}
+
+#time{
+	background: rgba(0,0,0,0);
+	border: 0;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.right_link{
+	float: right;
+}
+
+.right_link ul{
+	position: relative;
+	top: 35px;
+	z-index: 2;
+}
+
+.right_link li{
+	text-shadow: 5px 5px 5px #000;
+	font-size: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.right_link a{
+	color: #fff;
+}
