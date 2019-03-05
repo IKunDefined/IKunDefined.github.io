@@ -6,4 +6,10 @@
 
 3. `npm install`
 
-4. 将themes_setting文件复制一份并改名为themes
+* 这个就是markdown文档
+
+* 语法非常简单
+
+我说过
+
+> 没有比markdown更简单和方便的标记语言了
