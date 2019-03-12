@@ -1,6 +1,7 @@
 ---
 title: 从零开始用Hexo+Github搭建属于你自己的个人博客
 date: 2019-03-08 14:27:51
+update: 2019-03-12 14:53:00
 tags:
 - Hexo
 - 个人博客
@@ -43,7 +44,7 @@ Hexo是一个可以快速构建起个人博客的工具，用官网的介绍来�
   npm install hexo-cli -g
   ```
 
-  该命令需要通过命令行工具执行
+  该命令需要通过命令行工具执行。
 
   `hexo-cli`通过`npm`进行下载，如上所说，Hexo是npm上的一个博客工具，所以要通过npm的命令进行安装。
 
@@ -83,17 +84,75 @@ Hexo是一个可以快速构建起个人博客的工具，用官网的介绍来�
 
 # 博客配置
 
-* 配置项
+`_config.yml`中有一些比较重要的配置项，在这里我给大家例举出来解释一下，其他的配置项基本可以以此类推知道大概作用。
 
-  `_config.yml`中有一些比较重要的配置项，在这里我给大家例举出来解释一下，其他的配置项基本可以以此类推知道大概作用。
+* Site
+
+  * title
+
+    网站标题
+
+  * subtitle
+
+    网站副标题
+
+  * author
+
+    网站作者
+
+  * language
+
+    网站语言
+
+* Extensions
+
+  * theme
+
+    博客主题
+
+* Deployment
+
+  * deploy
+
+    部署配置
+
+需要注意的是，配置完`_config.yml`文件之后，需要重启`hexo`服务，否则配置不会生效。
 
 # 开启服务
 
 * Github Pages服务
 
+  Github Pages服务可以通过特定的`url`来进行访问，把静态文件放在开通了Github Pages服务的仓库中就可以在特定的`url`上访问你的网页。
+
+* 新建仓库
+
+  假设你已经有了Github账号，接下来你需要新建仓库，在新建仓库的时候，仓库的命名方式为`yourgithubaccount.github.io`，也就是命名的最开头是你的Github账号，以这样方式命名的仓库会开通Github Pages服务，到时候我们只需要将我们的静态文件部署到这个仓库中就可以了。
+
 # 部署站点
 
-* git config --global user.name
-* git config --global user.email
+* 配置git
+
+  * git config --global user.name
+  * git config --global user.email
+
+* 安装部署插件
+
+  `npm i hexo-deployer-git -S`
+
+* 配置`_config.yml`文件
+
+  * deploy
+
+    * type
+
+      git
+
+    * repo
+
+      https://github.com/yourname/yourname.github.io.git
+
+* 部署站点
+
+  `hexo d -g`或者`hexo g -d`
 
 # 文章撰写
