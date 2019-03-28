@@ -5,6 +5,7 @@ tags:
 - Hexo
 - 个人博客
 - 经验分享
+- 更新中
 categories:
 - 技术
 ---
@@ -61,13 +62,21 @@ Hexo是一个可以快速构建起个人博客的工具，用官网的介绍来�
 
   通过`hexo init`命令我们可以快速的初始化站点文件夹，我们可以在想要建立站点文件夹的文件夹的空白处按住`shift`后单击鼠标右键，在快捷菜单中选择在此处打开命令行工具，win10中显示的应该是`在此处打开Powershell`，打开之后，我们会看到路径就是在当前文件夹下，我们可以通过`hexo init 文件夹名`来新建。
 
+  ![快捷调用命令行工具](从零开始用Hexo-Github搭建属于你自己的个人博客/1.png)
+
+  ![快捷调用命令行工具](从零开始用Hexo-Github搭建属于你自己的个人博客/2.png)
+
   或者，我们在文件夹中新建好空的站点文件夹，进入到这个空的站点文件夹在空白处按住`shift`后单击鼠标右键，在快捷菜单中选择打开命令行工具的选项然后进入命令行工具直接输入`hexo init`在该文件夹中初始化博客站点。
 
 2. 预览站点
 
   在站点文件夹的位置中打开命令行工具，通过`hexo s`命令，片刻后，我们可以在默认的[localhost:4000](localhost:4000)中看到Hexo初始化生成的博客，一般来说主题是默认的`landscape`，全英文界面，还有一篇实例文章**Hello World**。
 
+  ![运行站点](从零开始用Hexo-Github搭建属于你自己的个人博客/3.png)
+
 3. 文件夹构成
+
+  ![文件夹构成](从零开始用Hexo-Github搭建属于你自己的个人博客/4.png)
 
   * `source`
 
@@ -172,18 +181,48 @@ Hexo是一个可以快速构建起个人博客的工具，用官网的介绍来�
 
 * 引用 >
 
+  以`> 引用内容`的方式引用别处出现过的内容。
+
 * 行内代码 `
+
+  一行以内的代码可以用这样的方式表示。
 
 * 代码块 ```
 
+  一行以上的代码块可以用这样的方式表示。
+
 * 粗体 **
+
+  用`**需要粗体表示的内容**`的方式来表示粗体文本。
 
 * 斜体 *
 
+  用`*需要斜体表示的内容*`的方式表示斜体文本。
+
 * 超链接 []()
+
+  用`[超链接](链接地址)`的方式表示超链接。
+
+# 主题分享
+
+* [Next](https://github.com/theme-next/hexo-theme-next)
+
+* [Art Design](https://github.com/dongyuanxin/theme-ad)
+
+* [Ocean](https://github.com/zhwangart/hexo-theme-ocean)
+
+* [MoeIcarus](https://github.com/MoeFE/Hexo-Theme-MoeIcarus)
+
+* [Cube](https://github.com/ZEROKISEKI/hexo-theme-cube)
+
+* [Yilia](https://github.com/litten/hexo-theme-yilia)
 
 ***
 
-最后更新 190325
+其实很多东西都可以自己去探索探索，安利一个[Hexo的Awesome List](https://github.com/hexojs/awesome-hexo)，方便大家开阔属于自己的Hexo个人博客。
+
+对了，还有[Hexo的官网](https://hexo.io/zh-cn/)，没事去官网看看是一个不错的习惯，对于什么技术来说都是这样。
+
+最后更新 190328
 
 更新中。。。
