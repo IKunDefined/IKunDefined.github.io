@@ -114,6 +114,10 @@ tags:
 
   拉取远程库中的php镜像到本地
 
+* Docker在Windows下的端口映射问题
+  
+  `docker-machine ip default`
+
 ***
 
 更新中

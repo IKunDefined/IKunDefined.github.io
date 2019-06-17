@@ -80,4 +80,3 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/ikundefined/ikundefined.github.io.git
-  # repo: https://IKunDefined:546827913wj@github.qdum.com/ikundefined/ikundefined.github.io.git
