@@ -38,6 +38,22 @@ tags:
 - [ ] Vuex
 - [ ] Nuxt.js
 
+* 190704
+
+- [ ] Async & Await
+- [ ] 正则表达式
+- [ ] Vue基础复习
+- [ ] React基础复习
+- [ ] Flutter
+- [ ] Promise原理
+- [ ] Dva完整尝试
+- [ ] Chart.js
+- [ ] 原生JS基础复习(ES5)
+- [ ] 手搭Webpack环境
+- [ ] Parcel
+- [ ] Electron
+- [ ] D3.js
+
 ---
 
 大概以后会经常更新（笑
