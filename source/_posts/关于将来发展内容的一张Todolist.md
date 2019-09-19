@@ -1,7 +1,8 @@
 ---
-title: 关于将来发展内容的一张Todolist
+title: Todolist For Learning
 date: 2019-04-23 16:56:07
 tags:
+- Todo
 categories: 技术
 ---
 
@@ -54,6 +55,11 @@ categories: 技术
 - [ ] Parcel
 - [ ] Electron
 - [ ] D3.js
+
+* 190919
+
+- [ ] JWT
+- [ ] Office UI Fabric
 
 ---
 

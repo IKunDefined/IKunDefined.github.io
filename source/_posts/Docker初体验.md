@@ -1,7 +1,8 @@
 ---
-title: docker初体验！！！
+title: Docker初体验
 date: 2019-04-19 10:31:01
 tags:
+- Docker
 categories: 技术
 ---
 
@@ -35,7 +36,7 @@ categories: 技术
 
   通过安装Docker Toolbox on Windows的方法，我的电脑上成功安装了Docker，桌面上会出现三个图标。
 
-  ![桌面图标](docker初体验！！！/1.png)
+  ![桌面图标](Docker初体验/1.png)
 
   在第一次使用Docker的时候遇到过一个问题，是在打开了`Docker Quickstart Terminal`之后，命令行卡死在下载`boot2docker.iso`这个文件上，其实解决方法很简单，只要把命令行里面的那个下载地址复制出来单独下载好，把下载好的文件放到相应的文件夹里就好了，我本机的路径是`C:\Users\15817\.docker\machine\cache`，可以用作参考。
 
