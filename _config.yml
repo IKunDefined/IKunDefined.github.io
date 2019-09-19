@@ -4,7 +4,7 @@
 
 # Site
 title: IKunDefined
-subtitle: ~ ACG Builders Project - 技术宅改变世界 ~
+subtitle: ~ 步入秋日 ~
 description:
 keywords:
 author: IKunDefined
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: huno
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
