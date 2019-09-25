@@ -2,8 +2,7 @@
 <header>
 	<div class="center" id="top">
 		<div class="left_title">
-			<h1 class="yike">依可</h1>
-			<h1 class="iketan">iketan</h1>
+			<h1 class="main_title">IKunDefined</h1>
 		</div>
 		<div class="clock">
 			<button id="time"></button>
@@ -21,49 +20,6 @@
 	</div>	
 </header>
 <script>
-	//跳转提示
-	linkB = document.getElementById('bilibili');
-	linkB.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的B站空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
-	linkW = document.getElementById('weibo');
-	linkW.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的微博空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
-	linkT = document.getElementById('twitter');
-	linkT.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的推特空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
-	linkZ = document.getElementById('zhihu');
-	linkZ.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的知乎空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
-	linkTB = document.getElementById('tieba');
-	linkTB.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的贴吧空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
-	linkG = document.getElementById('github');
-	linkG.onclick = function(){
-		var ask = confirm('你真的想要跳转到我的Github空间嘛~');
-		if(!ask){
-			return false;
-		}
-	}
 	//时间显示
 	function counter(){
 		var time = new Date();

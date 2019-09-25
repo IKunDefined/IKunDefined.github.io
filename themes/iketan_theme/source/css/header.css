@@ -26,12 +26,9 @@ header{
 	letter-spacing: 5px;
 }
 
-.yike{
-	font-size: 32px;
-}
-
-.iketan{
-	font-size: 45px;
+.main_title{
+	line-height: 100px;
+	font-size: 30px;
 }
 
 .clock{
