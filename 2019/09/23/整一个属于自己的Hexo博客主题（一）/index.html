@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前两天看到别的博主对自己的Hexo博客进行优化的成果，自己心动万分。但由于过于懒惰，搞得自己总是在博客个性化的这条路上磕磕绊绊。 于是乎，在昨天晚上，我终于下定决心，打算把自己在大三的时候做的Hexo博客主题拿出来重造一下，做一个属于自己的Hexo博客主题！">
+<meta name="keywords" content="Hexo,Hexo主题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="整一个属于自己的Hexo博客主题（一）">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/index.html">
+<meta property="og:site_name" content="IKunDefined">
+<meta property="og:description" content="前两天看到别的博主对自己的Hexo博客进行优化的成果，自己心动万分。但由于过于懒惰，搞得自己总是在博客个性化的这条路上磕磕绊绊。 于是乎，在昨天晚上，我终于下定决心，打算把自己在大三的时候做的Hexo博客主题拿出来重造一下，做一个属于自己的Hexo博客主题！">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/12.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/14.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/13.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/15.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/16.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/17.png">
+<meta property="og:updated_time" content="2019-11-09T02:31:15.681Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="整一个属于自己的Hexo博客主题（一）">
+<meta name="twitter:description" content="前两天看到别的博主对自己的Hexo博客进行优化的成果，自己心动万分。但由于过于懒惰，搞得自己总是在博客个性化的这条路上磕磕绊绊。 于是乎，在昨天晚上，我终于下定决心，打算把自己在大三的时候做的Hexo博客主题拿出来重造一下，做一个属于自己的Hexo博客主题！">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>整一个属于自己的Hexo博客主题（一） | IKunDefined</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IKunDefined</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">~ 步入秋日 ~</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">19</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">2</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">15</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/整一个属于自己的Hexo博客主题（一）/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IKunDefined"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/ikundefined.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IKunDefined"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">整一个属于自己的Hexo博客主题（一）
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-23 17:07:03" itemprop="dateCreated datePublished" datetime="2019-09-23T17:07:03+08:00">2019-09-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-09 10:31:15" itemprop="dateModified" datetime="2019-11-09T10:31:15+08:00">2019-11-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/1.png" alt="Hexo博客主题"></p>
+<p>前两天看到别的博主对自己的Hexo博客进行优化的成果，自己心动万分。但由于过于懒惰，搞得自己总是在博客个性化的这条路上磕磕绊绊。</p>
+<p>于是乎，在昨天晚上，我终于下定决心，打算把自己在大三的时候做的Hexo博客主题拿出来重造一下，做一个属于自己的Hexo博客主题！</p>
+<a id="more"></a>
+<hr>
+<p>早在一开始接触Hexo博客的时候，我就有定制自己博客主题的想法了，实际上那个时候也做了自己的博客主题，但是由于技术与审美上的不足，导致整个博客主题做的没能够达到自己想要的水平，就一直是处于放置play的状态。</p>
+<p>但昨天把这个主题拿出来给朋友看的时候，却得到了一定的肯定，我就重新燃起了把这个主题拿出来重做一下的激情。</p>
+<p>不过仔细的翻了一下主题的源码文件之后，我发现代码的书写风格还有一些格式的命名都跟我现在的习惯差距太大，而且文件分类的结构也有点问题，所以思考了片刻之后，还是打算重构一下这个主题，与此同时记录一下这个过程！</p>
+<p>想想还是有点激动人心！那么就开始整起来！</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>主要的开发过程参考<a href="https://hexo.io/zh-cn/docs/themes" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>首先，Hexo的主题需要放到Hexo文件夹中的themes文件夹中。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/3.png" alt="Hexo博客主题"></p>
+<p>进入到themes文件夹中后，直接创建以博客主题名称命名的文件夹就可以开始接下来的步骤了。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/4.png" alt="Hexo博客主题"></p>
+<p>在主题文件夹中创建好<code>layout</code>文件夹和<code>source</code>文件夹，我们就可以直接开始撸代码了，一开始不用像官方文档中写的那样把文件夹创建的那么齐全，我们按照自己的需要一步步的来走就好了。或者反过来像官方文档上写的那样把需要的文件和文件夹一次性全部创建好，也是一种方法。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/6.png" alt="Hexo博客主题"></p>
+<p>经过上面的流程之后，在Hexo根目录下的_config.yml中把theme配置项改成主题就iketh就可以在本地服务器上看到博客开发的进度了。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/7.png" alt="Hexo博客主题"></p>
+<p>当然现在的状态下肯定是空白页面，也就是从这一步开始，我们要逐渐的把自己的页面给构建起来。</p>
+<h2 id="页面移植"><a href="#页面移植" class="headerlink" title="页面移植"></a>页面移植</h2><p>当我们修改好主题配置项然后启动本地服务去刷新页面的时候，页面虽然是空白，但不会报错，在终端上，我们可以看到提示<code>No layout: index.html</code>，那么通过这个提示，我们就知道，我们是缺少了<code>index</code>的这个页面。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/5.png" alt="Hexo博客主题"></p>
+<p>先别急着莽撸代码，我们先确定一下，我们需要做哪些页面。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/9.png" alt="Hexo博客主题"></p>
+<p>参考了常见的博客主题所拥有的页面以及自己以前制作的博客所有的界面，我大致把页面分为<code>首页</code>、<code>文章页</code>、<code>分类页</code>、<code>标签页</code>和<code>归档页</code>。明确了要做哪些页面，我们就可以开始动手了，那么最开始肯定是先解决首页部分的制作了。</p>
+<h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>在主题文件夹根目录的layout文件夹中创建index.ejs模板文件，我在这里选用了的模板引擎是<a href="https://ejs.bootcss.com/" target="_blank" rel="noopener">EJS</a>。</p>
+<p>在创建好了的index.ejs中，先写一些基本的代码，看看在页面上能否显示出来。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>显示的页面是这样的。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/8.png" alt="Hexo博客主题"></p>
+<p>既然能够显示出来，那就可以正式开始撸代码了！首先我们需要清空样式，这里使用一下现成比较完善的样式清空库<a href="http://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a>。在官网把代码都给下载下来之后，在<code>source</code>文件夹中创建<code>css</code>文件夹，把<code>normalize.css</code>放在这个文件夹中。以后css样式文件的存放都是在这里。而在模板文件中的调用也很简单，直接用相对路径<code>/</code>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/normalize.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这之后需要调用图片、js文件或者其他资源文件的话，都用这种方式就好。</p>
+<p>考虑到是本来就有源码，同时只是做一些样式和结构上的重构，所以可以复用的地方还是接着复用。</p>
+<p>在Hexo的主题中，使用ejs编写代码的时候我们可以把页面重复的地方单独封装起来调用。所以我们明确一下页面相同的部分，把代码单独写在独立的ejs文件中进行调用就可以了。</p>
+<ul>
+<li><p>header - 页面顶部</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/10.png" alt="Hexo博客主题"></p>
+</li>
+<li><p>nav - 导航栏部分</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/11.png" alt="Hexo博客主题"></p>
+</li>
+<li><p>footer - 页面底部</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/12.png" alt="Hexo博客主题"></p>
+</li>
+<li><p>paginator - 分页跳转部分</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/14.png" alt="Hexo博客主题"></p>
+</li>
+</ul>
+<p>在<code>layout</code>文件夹底下新建<code>_partial</code>文件夹，用来存放需要被调用的文件。</p>
+<p>  <img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/13.png" alt="Hexo博客主题"></p>
+<p>分别创建<code>header.ejs</code>、<code>nav.ejs</code>、<code>footer.ejs</code>和<code>paginator.ejs</code>将代码转移过来。</p>
+<p>  <img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/15.png" alt="Hexo博客主题"></p>
+<p>之前在<code>layout</code>文件夹底下创建了<code>index.ejs</code>文件，Hexo为我们提供了<code>layout.ejs</code>，用来把页面相同的地方给引入进去，同时通过简单的方法可以直接调用主体页面的部分，例如首页（index.ejs）、文章页（post.ejs）和归档页（archive.ejs）等。</p>
+<p>我们只需要直接在<code>layout</code>文件夹下创建<code>layout.ejs</code>并且在里面调用代码就好了。</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/16.png" alt="Hexo博客主题"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;页面标题&lt;/title&gt;</span><br><span class="line">    &lt;!-- 基础样式 --&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/normalize.css&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;%- partial(&apos;_partial/header&apos;) %&gt;</span><br><span class="line">    &lt;%- partial(&apos;_partial/nav&apos;) %&gt;</span><br><span class="line">    &lt;%- body %&gt;</span><br><span class="line">    &lt;%- partial(&apos;_partial/footer&apos;) %&gt;</span><br><span class="line">    &lt;script src=&quot;/js/nav-scroll.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>通过上面的代码，我们可以了解到在Hexo中为我们提供了一些可以直接调用的方法，例如局部模板的调用方法<code>partial</code>，还有在<code>layout.ejs</code>中可以通过<code>&lt;%- body %&gt;</code>来调用主要页面的内容，这样我们也好吧<code>index</code>、<code>post</code>和<code>archive</code>等页面的主要代码拆开来写。</p>
+<p>接下来把以前写好的<code>index.ejs</code>中的主体部分迁移到<code>iketh</code>主题的<code>index.ejs</code>中，再通过<code>layout.ejs</code>中的<code>&lt;%- body %&gt;</code>来调用就好了。</p>
+<h3 id="文章页与归档页"><a href="#文章页与归档页" class="headerlink" title="文章页与归档页"></a>文章页与归档页</h3><p>文章页与归档页的移植也是相同的方法，在<code>layout</code>文件夹下创建<code>post.ejs</code>和<code>archive.ejs</code>，然后把先前的代码转移过来。</p>
+<p>有点要注意的是，我在设计归档页面的时候是把<strong>标签</strong>归档、<strong>分类</strong>归档以及<strong>时间</strong>归档，这三个部分是分不同类型设计的，所以说在<code>archive.ejs</code>中要通过Hexo提供的<code>is_category()</code>、<code>is_tag()</code>和<code>is_archive()</code>来判断。</p>
+<h2 id="静态资源转移"><a href="#静态资源转移" class="headerlink" title="静态资源转移"></a>静态资源转移</h2><p>与页面移植是同时做的事情，只不过写在后面。</p>
+<p>这个内容要做的就是把之前主题的<code>source</code>文件夹中的静态文件全部转移到<code>iketh</code>主题中的<code>source</code>文件夹中，实际上在做首页那一步操作的时候，为了做清除样式，我已经在<code>source</code>文件夹中创建了<code>css</code>文件夹，并且使用了<code>Normalize.css</code>这个清除样式库。</p>
+<h2 id="收尾"><a href="#收尾" class="headerlink" title="收尾"></a>收尾</h2><p>基本上做完移植工作之后，关于这个主题的重构就应该先告一个段落了。</p>
+<p>这一部分没有修改多少代码，不过我还是做了一部分样式上的修改，至少让整体看起来比较清爽了，不像以前那么萌二（其实也没啥不好。</p>
+<ul>
+<li><p>修改前</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/2.png" alt="Hexo博客主题"></p>
+</li>
+<li><p>修改后</p>
+<p><img src="/2019/09/23/整一个属于自己的Hexo博客主题（一）/17.png" alt="Hexo博客主题"></p>
+</li>
+</ul>
+<p>移植代码主要还是为了让我重新读一读代码，看看Hexo的主题大概要怎么做，从现在移植完后的角度来看，之前做的移植工作还是很有意义的，现在让我从零开始写，我也会有点头绪了。</p>
+<p>同时在移植的过程中也思考了有没有更好的文件架构，还有一些关于代码的命名之类的，不过这些都不太着急，放到之后的阶段里面做改进也OK。</p>
+<hr>
+<p>现在也把这个主题放到github上了，不过一个README都还没有（笑，希望能做到有人喜欢并且实际在用的程度吧~</p>
+<p><a href="https://github.com/IKunDefined/hexo-theme-iketh/releases/tag/v1.0.0" target="_blank" rel="noopener">39</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Hexo主题/" rel="tag"># Hexo主题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/20/今天“接触”到了两个优秀的博主/" rel="next" title="今天“接触”到了两个优秀的博主">
+                <i class="fa fa-chevron-left"></i> 今天“接触”到了两个优秀的博主
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/08/心态转换的关键/" rel="prev" title="心态转换的关键">
+                心态转换的关键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/ikundefined.jpg"
+                alt="IKunDefined"/>
+            
+              <p class="site-author-name" itemprop="name">IKunDefined</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/ikundefined" title="GitHub &rarr; https://github.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1254729251@qq.com" title="E-Mail &rarr; mailto:1254729251@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/ikundefined" title="Weibo &rarr; https://weibo.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面移植"><span class="nav-number">2.</span> <span class="nav-text">页面移植</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首页"><span class="nav-number">2.1.</span> <span class="nav-text">首页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章页与归档页"><span class="nav-number">2.2.</span> <span class="nav-text">文章页与归档页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态资源转移"><span class="nav-number">3.</span> <span class="nav-text">静态资源转移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收尾"><span class="nav-number">4.</span> <span class="nav-text">收尾</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IKunDefined</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color='102,204,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
