@@ -14,57 +14,57 @@ categories: 技术
 
 * 190423
 
-- [ ] PhoneGap
-- [ ] Cordova
+- [ ] [PhoneGap](https://phonegap.com/)
+- [ ] [Cordova](https://cordova.apache.org/)
 - [ ] Unity3D
-- [ ] Canvas
-- [ ] SVG
-- [ ] WebGL
-- [ ] Kubernetes
+- [ ] [Canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
+- [ ] [SVG](https://developer.mozilla.org/zh-CN/docs/Web/SVG)
+- [ ] [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API)
+- [ ] [Kubernetes](https://kubernetes.io/)
 - [ ] flexible.js
 - [ ] 支付功能
 - [ ] 前后端实时连接通信
 - [ ] 文件上传功能
-- [ ] dayjs
+- [ ] [dayjs](https://github.com/iamkun/dayjs)
 
 * 190611
 
-- [ ] WebSocket
+- [ ] [WebSocket](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket)
 - [ ] H5视频播放器
 - [ ] H5音频播放器
-- [ ] Three.js
+- [ ] [Three.js](https://threejs.org/)
 - [ ] JS单元测试
 - [ ] Vue.js实现原理
 - [ ] React完整尝试
 - [ ] AngularJS
-- [ ] Vuex
-- [ ] Nuxt.js
+- [ ] [Vuex](https://vuex.vuejs.org/)
+- [ ] [Nuxt.js](https://zh.nuxtjs.org/)
 
 * 190704
 
 - [ ] Async & Await
 - [ ] 正则表达式
-- [ ] Vue基础复习
-- [ ] React基础复习
-- [ ] Flutter
-- [ ] Promise原理
-- [ ] Dva完整尝试
-- [ ] Chart.js
+- [ ] [Vue基础复习](https://cn.vuejs.org/)
+- [ ] [React基础复习](https://react.docschina.org/)
+- [ ] [Flutter](https://flutterchina.club/)
+- [ ] [Promise原理](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [ ] [Dva完整尝试](https://dvajs.com/)
+- [ ] [Chart.js](http://chartjs.cn/)
 - [ ] 原生JS基础复习(ES5)
-- [ ] 手搭Webpack环境
-- [ ] Parcel
-- [ ] Electron
-- [ ] D3.js
+- [ ] [手搭Webpack环境](https://www.webpackjs.com/)
+- [ ] [Parcel](https://parceljs.org/)
+- [ ] [Electron](https://electronjs.org/)
+- [ ] [D3.js](https://d3js.org/)
 
 * 190919
 
-- [ ] JWT
-- [ ] Office UI Fabric
+- [ ] [JWT](https://jwt.io/)
+- [ ] [Office UI Fabric](https://developer.microsoft.com/en-us/fabric/#/)
 
 * 191107
 
-- [ ] NW.js
-- [ ] React Native
+- [ ] [NW.js](https://nwjs.io/)
+- [ ] [React Native](https://reactnative.cn/)
 - [ ] Vue持久化
 - [ ] 展开运算符
 - [ ] 节流
@@ -73,6 +73,21 @@ categories: 技术
 - [ ] CSS3动画
 - [ ] Vue底层原理
 
+* 191203
+
+- [ ] [face-api.js](https://github.com/justadudewhohacks/face-api.js)
+- [ ] [tensorflow.js](https://tensorflow.google.cn/js/)
+- [ ] 视频直播
+- [ ] [GraphQL](https://graphql.org/)
+- [ ] [Weex](https://weex.apache.org/zh/)
+- [ ] [Ionic](https://ionicframework.com/)
+- [ ] [Docker](https://www.docker.com/)
+- [ ] [Echarts](https://www.echartsjs.com/zh/index.html)
+- [ ] 排序算法
+- [ ] [Gitea](https://gitea.io/)
+- [ ] [Gogs](https://gogs.io/)
+- [ ] [Macaron](https://go-macaron.com/)
+
 ---
 
-一年大概整一个todo就够自己下一年学一整年了。。。
+大概整一个todo就够自己下一年学一整年了。。。
