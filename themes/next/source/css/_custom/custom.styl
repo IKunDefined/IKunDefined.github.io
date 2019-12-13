@@ -1,1 +1,26 @@
 // Custom styles.
+
+// 定义头部背景图
+#header {
+  // 背景图
+  background: url('/images/header_pic.jpg') no-repeat center center / cover;
+  text-shadow: 0 0 5px #000;
+  // 主标题上下线段颜色
+  .logo-line-before > i,
+  .logo-line-after > i {
+    background: #fff;
+  }
+  // 数字标示阴影
+  .badge {
+    text-shadow: 01px 01px 2px rgba(0,0,0,.5);
+  }
+  // nav链接与主标题字体颜色
+  a, span {
+    color: #fff;
+  }
+}
+
+// 手机端头部展开样式调整
+.site-nav {
+  border-top: 1px solid #ffffff00;
+}

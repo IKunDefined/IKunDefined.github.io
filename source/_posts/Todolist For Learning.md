@@ -87,6 +87,8 @@ categories: 技术
 - [ ] [Gitea](https://gitea.io/)
 - [ ] [Gogs](https://gogs.io/)
 - [ ] [Macaron](https://go-macaron.com/)
+- [ ] PhantomJS
+- [ ] NativeScript
 
 ---
 
