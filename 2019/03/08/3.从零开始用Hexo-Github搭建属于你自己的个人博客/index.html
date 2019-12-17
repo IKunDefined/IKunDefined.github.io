@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="距我刚开始接触Hexo到现在大概有2年多的时间了，为了复习一下用Hexo搭建个人博客的流程，大概在前两天，我找到我的一个朋友，硬是要给她用Hexo搭建一个博客。除了基本的介绍和每个操作的要点解释之外，基本上只花了1个小时多的时间来完成，当然，这是把下载时间也给算上了的。 在网络状况良好的情况下，正常流程下来大概30多分钟就可以完成博客的搭建了。这一篇文章就给大家介绍一下在Windows操作系统下">
+<meta name="keywords" content="经验分享,Hexo,个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始用Hexo+Github搭建属于你自己的个人博客">
+<meta property="og:url" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/index.html">
+<meta property="og:site_name" content="IKunDefined">
+<meta property="og:description" content="距我刚开始接触Hexo到现在大概有2年多的时间了，为了复习一下用Hexo搭建个人博客的流程，大概在前两天，我找到我的一个朋友，硬是要给她用Hexo搭建一个博客。除了基本的介绍和每个操作的要点解释之外，基本上只花了1个小时多的时间来完成，当然，这是把下载时间也给算上了的。 在网络状况良好的情况下，正常流程下来大概30多分钟就可以完成博客的搭建了。这一篇文章就给大家介绍一下在Windows操作系统下">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/0.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/4.png">
+<meta property="og:updated_time" content="2019-12-17T08:05:21.451Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始用Hexo+Github搭建属于你自己的个人博客">
+<meta name="twitter:description" content="距我刚开始接触Hexo到现在大概有2年多的时间了，为了复习一下用Hexo搭建个人博客的流程，大概在前两天，我找到我的一个朋友，硬是要给她用Hexo搭建一个博客。除了基本的介绍和每个操作的要点解释之外，基本上只花了1个小时多的时间来完成，当然，这是把下载时间也给算上了的。 在网络状况良好的情况下，正常流程下来大概30多分钟就可以完成博客的搭建了。这一篇文章就给大家介绍一下在Windows操作系统下">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/0.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>从零开始用Hexo+Github搭建属于你自己的个人博客 | IKunDefined</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IKunDefined</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">~ 步入秋日 ~</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">18</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">2</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">17</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IKunDefined"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/ikundefined.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IKunDefined"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从零开始用Hexo+Github搭建属于你自己的个人博客
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-08 14:27:51" itemprop="dateCreated datePublished" datetime="2019-03-08T14:27:51+08:00">2019-03-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-17 16:05:21" itemprop="dateModified" datetime="2019-12-17T16:05:21+08:00">2019-12-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/0.png" alt=""></p>
+<p>距我刚开始接触Hexo到现在大概有2年多的时间了，为了复习一下用Hexo搭建个人博客的流程，大概在前两天，我找到我的一个朋友，硬是要给她用Hexo搭建一个博客。除了基本的介绍和每个操作的要点解释之外，基本上只花了1个小时多的时间来完成，当然，这是把下载时间也给算上了的。</p>
+<p>在网络状况良好的情况下，正常流程下来大概30多分钟就可以完成博客的搭建了。这一篇文章就给大家介绍一下在<strong>Windows</strong>操作系统下如何使用<strong>Hexo+Github</strong>，<strong>免费</strong>而又<strong>快速</strong>的搭建好自己的<strong>个人博客</strong>！</p>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p>如果你并非编程爱好者或专业开发人员，那你可以忽略一些对于专业名词的具体介绍，只专注于步骤。</p>
+</blockquote>
+<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一个可以快速构建起个人博客的工具，用官网的介绍来说就是</p>
+<blockquote>
+<p>快速、简洁且高效的博客框架</p>
+</blockquote>
+<p>我的这个个人博客就是使用<code>Hexo</code>搭建的，主题使用的是<code>Next</code>。Hexo拥有很多美观的博客主题，在这篇文章的最后，我会给大家介绍一些我觉得不错的。</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>在搭建环境这一步，我们需要安装必不可缺的一些工具。</p>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>  <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">中文官网下载</a></p>
+<blockquote>
+<p>安装Node.js是为了Node.js附带的npm，Hexo是npm上的一个博客构建工具，所以要通过npm命令进行下载，因此需要安装Node.js</p>
+</blockquote>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>  <span style="color: #6cf;">tip:</span> 该命令需要通过<strong>命令行工具</strong>执行。</p>
+<blockquote>
+<p><code>hexo-cli</code>通过<code>npm</code>进行下载，如上所说，Hexo是npm上的一个博客构建工具，所以要通过npm的命令进行安装。</p>
+</blockquote>
+<blockquote>
+<p>我们使用Hexo的操作基本上都是通过命令进行的，因此我们需要下载Hexo的命令行工具，即<code>hexo-cli</code>，为的是可以在命令行中使用<code>hexo</code>命令进行相关操作。</p>
+</blockquote>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>  <a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">官网下载</a></p>
+<blockquote>
+<p>Git是现在最为流行的<strong>版本控制系统</strong>，我们在站点的搭建过程中会通过Git来部署我们的站点，更新内容到<strong>Github</strong>的服务器上。</p>
+</blockquote>
+<h2 id="站点构建"><a href="#站点构建" class="headerlink" title="站点构建"></a>站点构建</h2><h3 id="站点初始化"><a href="#站点初始化" class="headerlink" title="站点初始化"></a>站点初始化</h3><p>  通过<code>hexo init</code>命令我们快速初始化站点文件夹</p>
+<p>  <span style="color: #6cf;">tip:</span> 我们可以在想要建立站点文件夹的文件夹的空白处按住<code>shift</code>后单击鼠标右键，在快捷菜单中选择在此处打开命令行工具，win10中显示的应该是<code>在此处打开Powershell</code>，打开之后，我们会看到路径就是在当前文件夹下，我们可以通过<code>hexo init 文件夹名</code>来新建。</p>
+<p>  <img src="/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/1.png" alt="快捷调用命令行工具"></p>
+<p>  <img src="/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/2.png" alt="快捷调用命令行工具"></p>
+<p>  或者，我们在文件夹中新建好空的站点文件夹，进入到这个空的站点文件夹在空白处按住<code>shift</code>后单击鼠标右键，在快捷菜单中选择打开命令行工具的选项然后进入命令行工具直接输入<code>hexo init</code>在该文件夹中初始化博客站点。</p>
+<h3 id="博客预览"><a href="#博客预览" class="headerlink" title="博客预览"></a>博客预览</h3><p>  在站点文件夹的位置中打开命令行工具，通过<code>hexo s</code>命令，片刻后，我们可以在默认的<a href="localhost:4000" target="_blank" rel="noopener">localhost:4000</a>中看到Hexo初始化生成的博客，一般来说主题是默认的<code>landscape</code>，全英文界面，还有一篇实例文章<strong>Hello World</strong>。</p>
+<p>  <img src="/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/3.png" alt="运行站点"></p>
+<h3 id="站点文件夹构成"><a href="#站点文件夹构成" class="headerlink" title="站点文件夹构成"></a>站点文件夹构成</h3><p>  <img src="/2019/03/08/3.从零开始用Hexo-Github搭建属于你自己的个人博客/4.png" alt="文件夹构成"></p>
+<ul>
+<li><p><code>source</code></p>
+<p><code>source</code>文件夹中的<code>_posts</code>文件夹是存放博文的地方，最开始我们可以看到有一个后缀名为<code>.md</code>的文件在里面，<code>.md</code>是使用<code>Markdown</code>撰写的文档格式，学习起来非常简单，不用担心，熟练用起来之后相信你也会喜欢上。</p>
+</li>
+<li><p><code>themes</code></p>
+<p><code>themes</code>是存放Hexo主题的文件夹，Hexo默认的主题是<code>landscape</code>，如果觉得不好看可以自己找一些主题替换，关于如何搜索主题、更换主题和主题的一些配置在以后我也会更新文章为大家说明，文章最后也会介绍一些我觉得不错的主题给大家。</p>
+</li>
+<li><p><code>_config.yml</code></p>
+<p><code>_config.yml</code>文件是Hexo的核心配置，配置也是Hexo中非常重要的部分，我将在配置博客中详细说明。</p>
+</li>
+</ul>
+<h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><p><code>_config.yml</code>中有一些比较重要的配置项，在这里我给大家例举出来解释一下，其他的配置项基本可以以此类推知道大概作用。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">网站副标题</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">网站语言</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">博客主题</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span> <span class="string">部署配置</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要注意的是，配置完<code>_config.yml</code>文件之后，需要重启<code>hexo</code>服务，否则配置不会生效。</p>
+</blockquote>
+<h2 id="部署站点"><a href="#部署站点" class="headerlink" title="部署站点"></a>部署站点</h2><h3 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h3><ul>
+<li><p>新建仓库</p>
+<p>假设你已经有了Github账号，接下来你需要新建仓库，在新建仓库的时候，仓库的命名方式为<code>yourgithubaccount.github.io</code>，也就是命名的最开头是你的Github账号，以这样方式命名的仓库会开通Github Pages服务，到时候我们只需要将我们的静态文件部署到这个仓库中就可以了。</p>
+<blockquote>
+<p>Github Pages服务可以通过特定的<code>url</code>来进行访问，把静态文件放在开通了Github Pages服务的仓库中就可以在特定的<code>url</code>上访问你的网页。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="上传Github"><a href="#上传Github" class="headerlink" title="上传Github"></a>上传Github</h3><ul>
+<li><p>配置git</p>
+<ul>
+<li>git config –global user.name</li>
+<li>git config –global user.email</li>
+</ul>
+</li>
+<li><p>安装部署插件</p>
+<p><code>npm i hexo-deployer-git -S</code></p>
+</li>
+<li><p>配置<code>_config.yml</code>文件</p>
+<ul>
+<li><p>deploy</p>
+<ul>
+<li><p>type: git</p>
+</li>
+<li><p>repo: <a href="https://github.com/yourname/yourname.github.io.git" target="_blank" rel="noopener">https://github.com/yourname/yourname.github.io.git</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>部署站点</p>
+<p><code>hexo d -g</code>或者<code>hexo g -d</code></p>
+</li>
+</ul>
+<h2 id="文章撰写"><a href="#文章撰写" class="headerlink" title="文章撰写"></a>文章撰写</h2><p><code>Hexo</code>是用<code>Markdown</code>来写文章的，<code>Markdown</code>是一种非常简单的标记语言，这里来介绍一下常用的Markdown语法，非常简单，5分钟之内就可以学会。</p>
+<ul>
+<li><p>标题 #</p>
+<p>标题使用<code># 标题内容</code>来表示，<code>#</code>的数量代表标题的大小，一个<code>#</code>是一级标题，最大，<code>##</code>是二级标题，以此类推，<code>#####</code>是六级标题，最小。</p>
+</li>
+<li><p>无序列表 *</p>
+<p>无序列表通过<code>* 列表项</code>来表示，可以嵌套，以显示不同样式的列表项标识。</p>
+</li>
+<li><p>有序列表 1.</p>
+<p>有序列表通过<code>n. 列表项</code>的方式来表示。</p>
+</li>
+<li><p>引用 &gt;</p>
+<p>以<code>&gt; 引用内容</code>的方式引用别处出现过的内容。</p>
+</li>
+<li><p>行内代码 `</p>
+<p>一行以内的代码可以用这样的方式表示。</p>
+</li>
+<li><p>代码块 <code>`</code></p>
+<p>一行以上的代码块可以用这样的方式表示。</p>
+</li>
+<li><p>粗体 **</p>
+<p>用<code>**需要粗体表示的内容**</code>的方式来表示粗体文本。</p>
+</li>
+<li><p>斜体 *</p>
+<p>用<code>*需要斜体表示的内容*</code>的方式表示斜体文本。</p>
+</li>
+<li><p>超链接 <a href=""></a></p>
+<p>用<code>[超链接](链接地址)</code>的方式表示超链接。</p>
+</li>
+</ul>
+<h2 id="主题分享"><a href="#主题分享" class="headerlink" title="主题分享"></a>主题分享</h2><ul>
+<li><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">Next</a></p>
+</li>
+<li><p><a href="https://github.com/dongyuanxin/theme-ad" target="_blank" rel="noopener">Art Design</a></p>
+</li>
+<li><p><a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></p>
+</li>
+<li><p><a href="https://github.com/MoeFE/Hexo-Theme-MoeIcarus" target="_blank" rel="noopener">MoeIcarus</a></p>
+</li>
+<li><p><a href="https://github.com/ZEROKISEKI/hexo-theme-cube" target="_blank" rel="noopener">Cube</a></p>
+</li>
+<li><p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a></p>
+</li>
+</ul>
+<hr>
+<p>其实很多东西都可以自己去探索探索，安利一个<a href="https://github.com/hexojs/awesome-hexo" target="_blank" rel="noopener">Hexo的Awesome List</a>，方便大家开阔属于自己的Hexo个人博客。</p>
+<p>对了，还有<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo的官网</a>，没事去官网看看是一个不错的习惯，对于什么技术来说都是这样。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/经验分享/" rel="tag"># 经验分享</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/05/2.对前端入门的一些想法和总结/" rel="next" title="对前端入门的一些想法和总结">
+                <i class="fa fa-chevron-left"></i> 对前端入门的一些想法和总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/22/4.地狱一般的加班与其后的黎明/" rel="prev" title="地狱一般的加班与其后的黎明">
+                地狱一般的加班与其后的黎明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/ikundefined.jpg"
+                alt="IKunDefined"/>
+            
+              <p class="site-author-name" itemprop="name">IKunDefined</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/ikundefined" title="GitHub &rarr; https://github.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1254729251@qq.com" title="E-Mail &rarr; mailto:1254729251@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/ikundefined" title="Weibo &rarr; https://weibo.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo简介"><span class="nav-number">1.</span> <span class="nav-text">Hexo简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">2.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">2.3.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站点构建"><span class="nav-number">3.</span> <span class="nav-text">站点构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#站点初始化"><span class="nav-number">3.1.</span> <span class="nav-text">站点初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#博客预览"><span class="nav-number">3.2.</span> <span class="nav-text">博客预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#站点文件夹构成"><span class="nav-number">3.3.</span> <span class="nav-text">站点文件夹构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客配置"><span class="nav-number">4.</span> <span class="nav-text">博客配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署站点"><span class="nav-number">5.</span> <span class="nav-text">部署站点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启服务"><span class="nav-number">5.1.</span> <span class="nav-text">开启服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传Github"><span class="nav-number">5.2.</span> <span class="nav-text">上传Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章撰写"><span class="nav-number">6.</span> <span class="nav-text">文章撰写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题分享"><span class="nav-number">7.</span> <span class="nav-text">主题分享</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IKunDefined</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color='102,204,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

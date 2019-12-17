@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前些日子，在玩了许多RPG黄油的情况下，我去研究了一下RPG Maker VX Ace，同时也翻了翻深藏在Github的Star清单里的AVG.js，原因很简单，因为自己有了做游戏的念头。 也因为想要做游戏的这个原因，我碰巧遇见了奶牛关这个社区，仿佛是打开了另外一个世界的大门。">
+<meta name="keywords" content="奶牛关,游戏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我加入了奶牛关">
+<meta property="og:url" content="http://yoursite.com/2019/07/10/7.我加入了奶牛关/index.html">
+<meta property="og:site_name" content="IKunDefined">
+<meta property="og:description" content="前些日子，在玩了许多RPG黄油的情况下，我去研究了一下RPG Maker VX Ace，同时也翻了翻深藏在Github的Star清单里的AVG.js，原因很简单，因为自己有了做游戏的念头。 也因为想要做游戏的这个原因，我碰巧遇见了奶牛关这个社区，仿佛是打开了另外一个世界的大门。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/07/10/7.我加入了奶牛关/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/10/7.我加入了奶牛关/2.png">
+<meta property="og:updated_time" content="2019-12-17T07:55:47.146Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我加入了奶牛关">
+<meta name="twitter:description" content="前些日子，在玩了许多RPG黄油的情况下，我去研究了一下RPG Maker VX Ace，同时也翻了翻深藏在Github的Star清单里的AVG.js，原因很简单，因为自己有了做游戏的念头。 也因为想要做游戏的这个原因，我碰巧遇见了奶牛关这个社区，仿佛是打开了另外一个世界的大门。">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/10/7.我加入了奶牛关/1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/10/7.我加入了奶牛关/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>我加入了奶牛关 | IKunDefined</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IKunDefined</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">~ 步入秋日 ~</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签<span class="badge">18</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类<span class="badge">2</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档<span class="badge">17</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/10/7.我加入了奶牛关/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IKunDefined"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/ikundefined.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IKunDefined"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">我加入了奶牛关
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-10 14:15:19" itemprop="dateCreated datePublished" datetime="2019-07-10T14:15:19+08:00">2019-07-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-17 15:55:47" itemprop="dateModified" datetime="2019-12-17T15:55:47+08:00">2019-12-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/个人/" itemprop="url" rel="index"><span itemprop="name">个人</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2019/07/10/7.我加入了奶牛关/1.png" alt=""></p>
+<p>前些日子，在玩了许多RPG黄油的情况下，我去研究了一下<a href="http://www.rpgmakerweb.com/products/programs/rpg-maker-vx-ace" target="_blank" rel="noopener">RPG Maker VX Ace</a>，同时也翻了翻深藏在Github的Star清单里的<a href="https://github.com/avgjs/avg-core" target="_blank" rel="noopener">AVG.js</a>，原因很简单，因为自己有了做游戏的念头。</p>
+<p>也因为<strong>想要做游戏</strong>的这个原因，我碰巧遇见了<a href="https://cowlevel.net" target="_blank" rel="noopener">奶牛关</a>这个社区，仿佛是打开了另外一个世界的大门。</p>
+<a id="more"></a>
+<hr>
+<p>先说说我想要做游戏的原因，不仅仅是因为玩了许多RPG小黄油，除此之外，还有室友兼同事的秦老哥用<a href="https://unity3d.com/cn/" target="_blank" rel="noopener">Unity3D</a>还有<a href="https://cocos2d-x.org/" target="_blank" rel="noopener">Cocos2D</a>做出的一些有意思的小东西比较吸引我，以及在最近小半年的工作里一直在接触许多网页图形相关类的一些工作内容让我对游戏方面有了点初步认识，这些动机一起组成了<strong>我想要做游戏</strong>的一股冲动。</p>
+<p>凭着这股冲动，我去下载了制作RPG小游戏的<a href="http://www.rpgmakerweb.com/products/programs/rpg-maker-vx-ace" target="_blank" rel="noopener">RPG Maker VX Ace</a>，还在Github里面翻出来了Star了好久了的<a href="https://github.com/avgjs/avg-core" target="_blank" rel="noopener">AVG.js</a>，通过搜索引擎的各种链接资料，我在百度上看到了<a href="https://cowlevel.net/article/1872554" target="_blank" rel="noopener">《发布一个功能完整的 Web AVG,使用 AVG.js 制作》</a>这篇文章链接，这个链接带我跳进了奶牛关的社区里面，因为界面和配色做的挺符合我的审美，所以我就点开了注册账号，但是发现注册账号还需要填写资料通过审核，这就让我对这个社区有点兴趣了。</p>
+<p>当初进入B站的时候，最吸引我的部分就是入站的100题了，再看看如今的正式会员答题，心情真的是很微妙。而奶牛关的这种审核机制，对于我来说是非常有吸引力的，毕竟我以前还妄想着制作一个注册需要答题或者审核的以二次元兴趣爱好为主题的社交平台呢。</p>
+<p>按照流程，我认真地填写完就提交了注册申请，但说实话我没什么把握，主要是不确定我填写的内容是否能达到审核的最低标准，要是要求程度是游戏狂热爱好者或者游戏殿堂级开发者的话，那我这种程度100%得被PASS掉。但是细细想想，一般情况下也不会有变态到那种程度的社区。我填写的申请大概体现出了我是一个刚刚开始接触不同种类游戏的初级玩家，以及作为前端开发者慢慢有了做游戏开发倾向的样子。</p>
+<hr>
+<p>昨天在写“Hexo基础教程”草稿的时候在网上找了一些关于<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>的资料，然后有一篇资料的链接跳到了<a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a>的网站里面。因为Udemy观看免费视频教程需要登录，但是我忘记了账号密码，所以就去发邮箱重新填写密码，结果在邮箱里面发现了奶油关发给我的通过结果，这就立马点进去了。</p>
+<p>正式进入前跟大多数网站一样，都有标签订阅之类的用户定位，我觉得对于优质社区来说，这方面做得应该不会很差，所以我相应的也是仔细的做了自己的选择。没有辜负我的认真选择，进入到主页之后阅览到的动态给我的感觉基本都是自己想要看的优质内容，同时给我一种社区内的用户质量很高的感觉，至少这个社区给我的第一印象是非常好的。</p>
+<p>这个社区本身还带有玩过的游戏记录之类的功能，我觉得这一点也是非常戳我的，平时我就会在各种相关平台上做我的各种进度记录等等，像<a href="https://www.douban.com/people/179003512/" target="_blank" rel="noopener">豆瓣</a>记录读书和电影，<a href="http://bangumi.tv/user/ikundefined" target="_blank" rel="noopener">Bangumi</a>记录番剧和日剧，<a href="https://user.qzone.qq.com/1581740452/photo" target="_blank" rel="noopener">QQ空间相册</a>寄放图片等等。相信在这之后也会在这个社区上记录很多游戏经历吧！</p>
+<p>再来，我是因为游戏开发相关的内容进入到这个社区，也在这个社区里面看到了不少游戏开发相关的文章和用户，这一点对于现在的我来说更是非常有吸引力的。</p>
+<p><img src="/2019/07/10/7.我加入了奶牛关/2.png" alt=""></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/奶牛关/" rel="tag"># 奶牛关</a>
+          
+            <a href="/tags/游戏/" rel="tag"># 游戏</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/05/6.关于我想要写个人博客的两三事/" rel="next" title="关于我想要写博客的两三事">
+                <i class="fa fa-chevron-left"></i> 关于我想要写博客的两三事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/16/8.合并技术博客和个人博客/" rel="prev" title="合并技术博客和个人博客">
+                合并技术博客和个人博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/ikundefined.jpg"
+                alt="IKunDefined"/>
+            
+              <p class="site-author-name" itemprop="name">IKunDefined</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/ikundefined" title="GitHub &rarr; https://github.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1254729251@qq.com" title="E-Mail &rarr; mailto:1254729251@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/ikundefined" title="Weibo &rarr; https://weibo.com/ikundefined" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IKunDefined</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color='102,204,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+  
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
