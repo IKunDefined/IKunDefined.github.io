@@ -1,0 +1,158 @@
+/* main part */
+.main {
+  width: 1076px;
+  margin: 0px auto 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* main post */
+.posts {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 1px #b7d3f2;
+  width: 70%;
+  padding: 20px;
+}
+.post {
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+.post_title_link {
+  font-size: 18px;
+  font-weight: bold;
+}
+.post_title_link,.post_title_link:visited {
+  color: #044999;
+}
+.post_title_link:hover {
+  color: #3D94CB;
+}
+.post_content {
+  padding: 10px;
+}
+.read_more {
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  width: 70px;
+  float: right;
+  background-color: #03A9F4;
+  border: 0px;
+  border-radius: 5px;
+  color: #fff;
+}
+.post_meta {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.post_meta span {
+  margin-right: 10px;
+}
+.post_meta a,.post_meta a:visited {
+  color: #1067B9;
+}
+.post_meta a:hover {
+  color: #73B0DA;
+}
+.post_meta ul {
+  display: inline-block;
+  position: relative;
+    top: 4px;
+}
+.post_meta ul li {
+  float: left;
+  margin-right: 5px;
+}
+
+/* paginator part */
+.page_nav {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  padding: 10px 0;
+}
+.page_nav > * {
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #C0D1D8;
+  font-size: 14px;
+  padding: 4px 12px;
+  margin: 0 5px;
+  color: #719CF7;
+}
+.page_nav > * :not(.current):hover{
+  background-color: #C6D8FF;
+}
+.page_nav > .current{
+  border: 0;
+}
+
+/* side part */
+.information {
+  width: 29%;
+}
+.comment,
+.aboutme,
+.teledoor {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 1px #b7d3f2;
+}
+.search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px 1px #b7d3f2;
+  border-radius: 5px;
+  text-align: center;
+  background: #6cf;
+  color: #fff;
+  cursor: pointer;
+}
+.search > div,
+.comment > div,
+.aboutme > div,
+.teledoor  div {
+  padding: 10px;
+}
+.search > span,
+.comment > span,
+.aboutme > span:nth-child(1),
+.teledoor > span {
+  padding-left: 10px;
+  border-left: 3px solid #6cf;
+}
+.aboutme > span:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  margin-right: 15px;
+  float: right;
+  background: #1067B9;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+}
+.other,
+.other:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.other:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.aboutme_link:hover,
+.aboutme_link,
+.aboutme_link:visited {
+  color: #6cf;
+}
